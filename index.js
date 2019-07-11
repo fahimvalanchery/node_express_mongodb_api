@@ -11,7 +11,7 @@ const app = new express();
 app.use(cors());
 app.use(bodyparser.json());
 
-const PORT = 3000;
+var port = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
   res.send("Backend API Created using Node-Express-MongoDb");
@@ -31,6 +31,6 @@ app.get("/json", (req, res) => {
 app.use("/user", userController);
 app.use("/patients", patientController);
 
-app.listen(PORT, () => {
-  console.log("Server is running on port: " + PORT);
+app.listen(port, () => {
+  console.log("Server is running on port: " + port);
 });
