@@ -10,6 +10,7 @@ var PatientSchema = new Schema({
   age: String,
   dob: String,
   gender: String,
+  default_status: Boolean,
   occupation: String,
   address: [
     {
