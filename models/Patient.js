@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/UserDB", { useNewUrlParser: true });
+mongoose.connect(
+  "mongodb://admin:password123@ds249717.mlab.com:49717/patient",
+  { useNewUrlParser: true }
+);
 const Schema = mongoose.Schema;
 
 var PatientSchema = new Schema({
