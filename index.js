@@ -1,6 +1,5 @@
 const express = require("express");
 
-const Data = require("./Data");
 const userController = require("./controllers/userController");
 const patientController = require("./controllers/patientController");
 
