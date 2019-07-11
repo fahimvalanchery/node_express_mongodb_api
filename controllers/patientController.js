@@ -24,26 +24,42 @@ router.post("/", (req, res) => {
 
 router.get("/", (req, res) => {
   Patient.find({}, (err, patient) => {
-    res.json(patient);
-    console.log("error " + err);
+    try {
+      res.json(patient);
+    } catch (error) {
+      console.log(err);
+      console.log(error);
+    }
   });
 });
 router.get("/:id", (req, res) => {
   Patient.findById(req.params.id, (err, patient) => {
-    res.json(patient);
-    console.log("error " + err);
+    try {
+      res.json(patient);
+    } catch (error) {
+      console.log(err);
+      console.log(error);
+    }
   });
 });
 router.delete("/:id", (req, res) => {
   Patient.findByIdAndRemove(req.params.id, (err, patient) => {
-    res.json(patient);
-    console.log("error " + err);
+    try {
+      res.json(patient);
+    } catch (error) {
+      console.log(err);
+      console.log(error);
+    }
   });
 });
 router.put("/:id", (req, res) => {
   Patient.findByIdAndUpdate(req.params.id, (err, patient) => {
-    res.json(patient);
-    console.log("error " + err);
+    try {
+      res.json(patient);
+    } catch (error) {
+      console.log(err);
+      console.log(error);
+    }
   });
 });
 
